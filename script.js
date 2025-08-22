@@ -1,3 +1,82 @@
+// Data for all projects
+const projectsData = [
+  {
+    title: 'Building a GPT-Language Model',
+    image: 'llm.png',
+    description: 'Designed and implemented a transformer-based language model in PyTorch, coding attention mechanisms & tokenization logic from scratch. Architected a training pipeline that reduced validation loss by 15%, generating context-aware sentences for downstream NLP tasks. The model was open-sourced with documentation, a GitHub repo, and deployment on Hugging Face Spaces for public access.',
+    link: 'https://github.com/S1u2m3e4e5t6/Large-Language-Model-LLM-Fundamentals-Construction-Exploration'
+  },
+ {
+    title: 'LexiVoice AI',
+    image: 'LexiVoice AI.png',
+    description: '•Engineered a voice-powered legal assistant to provide realtime legal information and draft standard legal documents.•Utilized a fine-tuned Large Language Model (LLM) for legaldomain knowledge, accomplished 92% accuracy inproviding relevant answers and reducing manual researchtime by 80%.•Deployed the full-stack service on AWS with a FastAPIbackend, ensuring sub-200ms latency for real-timeresponses.',
+    link: 'https://github.com/S1u2m3e4e5t6/LexiVoice-AI'
+  },
+ {
+    title: 'RedOpsAI',
+    image: 'RedOpsAI.png',
+    description: 'Built an autonomous pentesting agent using LLMs +Reinforcement Learning, capable of reconnaissance,vulnerability scanning, exploitation, and privilegeescalation.•Automated end-to-end security assessments withLangChain workflows, reducing manual effort by 70% andimproving vulnerability discovery accuracy',
+    link: 'https://github.com/S1u2m3e4e5t6/RedOpsAI-Autonomous-Pentesting-Agent'
+  }
+  {
+    title: 'Toxic Comment Classification',
+    image: 'toxic.png',
+    description: 'Engineered an end-to-end NLP pipeline for toxic comment detection by preprocessing over 100k text samples using NLTK, Pandas, and TF-IDF features. The project trained and evaluated a Logistic Regression model achieving 95% accuracy, with optimized precision and recall for production deployment.',
+    link: 'https://github.com/S1u2m3e4e5t6/Toxic-Comment-Classification-Web-App'
+  },
+  {
+    title: 'Car Damage Prediction',
+    image: 'car.png',
+    description: 'Developed a deep learning image classifier with 92% accuracy on over 11k labeled images to enable real-time damage detection across multiple datasets. Built a modular data preprocessing-to-model pipeline in PyTorch, which improved training efficiency and scalability for production use.',
+    link: 'https://github.com/S1u2m3e4e5t6/Car-Damage-Detection'
+  },
+  {
+    title: 'CrewAI Multi-Agent System Prototype',
+    image: 'crew.png',
+    description: 'Engineered a CrewAI-based multi-agent system that deployed autonomous "crew" agents for collaborative task execution. This improved orchestration efficiency by 35% and enhanced workflow modularity. Implemented configurable agent behaviors and inter-agent communication protocols, which enabled dynamic task delegation and reduced end-to-end task completion time by about 40% in prototype testing.',
+    link: 'https://github.com/S1u2m3e4e5t6/CrewAI-Multi-Agent-System-Prototype'
+  },
+  {
+    title: 'Credit Risk Modeling',
+    image: 'cerdit.png',
+    description: 'Built a predictive credit risk model with 94% accuracy, which reduced manual loan reviews by 60% and cut decision time from 5 minutes to 15 seconds. The model was deployed on a Streamlit and AWS pipeline for real-time evaluation, which enhanced loan officer decision-making.',
+    link: 'https://github.com/S1u2m3e4e5t6/Credit-Risk-Modelling-Classification-'
+  },
+  {
+    title: 'Predictive Health Insurance Premium Model',
+    image: 'helath.png',
+    description: 'Designed a high-accuracy (>97%) premium estimation model using demographic and medical data, which reduced the error margin by 10%. A secure, cloud-hosted app was deployed to enable instant predictions for underwriters.',
+    link: 'https://github.com/S1u2m3e4e5t6/Healthcare-Premium-Prediction-Regression-'
+  },
+  {
+    title: 'AI-Generated Image Detector',
+    image: 'AI-Generated Image Detector.png',
+    description: 'Designed and trained a model to classify AI-generated vs.real images using a dataset of 50K+ samples from StableDiffusion, MidJourney, and ImageNet.',
+    link: 'https://github.com/S1u2m3e4e5t6/AI-Generated-Image-Detector'
+  }
+];
+
+// Function to dynamically generate project cards
+function renderProjects() {
+    const projectsGrid = document.querySelector('.projects-grid');
+    if (!projectsGrid) return; 
+
+    projectsData.forEach(project => {
+        const projectCard = document.createElement('div');
+        projectCard.className = 'project-card';
+
+        projectCard.innerHTML = `
+            <img src="${project.image}" alt="${project.title} screenshot">
+            <div class="project-content">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <a href="${project.link}" class="project-link">View Project</a>
+            </div>
+        `;
+        projectsGrid.appendChild(projectCard);
+    });
+}
+
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
     // Add smooth scrolling to all links
@@ -36,6 +115,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, observerOptions);
+
+    // Call the function to render projects before observing them
+    renderProjects();
 
     // Observe all cards for animation
     const cards = document.querySelectorAll('.project-card, .certificate-card, .skill-box');
