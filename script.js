@@ -6,18 +6,18 @@ const projectsData = [
     description: 'Designed and implemented a transformer-based language model in PyTorch, coding attention mechanisms & tokenization logic from scratch. Architected a training pipeline that reduced validation loss by 15%, generating context-aware sentences for downstream NLP tasks. The model was open-sourced with documentation, a GitHub repo, and deployment on Hugging Face Spaces for public access.',
     link: 'https://github.com/S1u2m3e4e5t6/Large-Language-Model-LLM-Fundamentals-Construction-Exploration'
   },
- {
+  {
     title: 'LexiVoice AI',
     image: 'LexiVoice AI.png',
-    description: '•Engineered a voice-powered legal assistant to provide realtime legal information and draft standard legal documents.•Utilized a fine-tuned Large Language Model (LLM) for legaldomain knowledge, accomplished 92% accuracy inproviding relevant answers and reducing manual researchtime by 80%.•Deployed the full-stack service on AWS with a FastAPIbackend, ensuring sub-200ms latency for real-timeresponses.',
+    description: 'Engineered a voice-powered legal assistant to provide real-time legal information and draft standard legal documents. Utilized a fine-tuned Large Language Model (LLM) for legal-domain knowledge, accomplished 92% accuracy in providing relevant answers and reducing manual research time by 80%. Deployed the full-stack service on AWS with a FastAPI backend, ensuring sub-200ms latency for real-time responses.',
     link: 'https://github.com/S1u2m3e4e5t6/LexiVoice-AI'
   },
- {
+  {
     title: 'RedOpsAI',
     image: 'RedOpsAI.png',
-    description: 'Built an autonomous pentesting agent using LLMs +Reinforcement Learning, capable of reconnaissance,vulnerability scanning, exploitation, and privilegeescalation.•Automated end-to-end security assessments withLangChain workflows, reducing manual effort by 70% andimproving vulnerability discovery accuracy',
+    description: 'Built an autonomous pentesting agent using LLMs + Reinforcement Learning, capable of reconnaissance, vulnerability scanning, exploitation, and privilege escalation. Automated end-to-end security assessments with LangChain workflows, reducing manual effort by 70% and improving vulnerability discovery accuracy.',
     link: 'https://github.com/S1u2m3e4e5t6/RedOpsAI-Autonomous-Pentesting-Agent'
-  }
+  },
   {
     title: 'Toxic Comment Classification',
     image: 'toxic.png',
@@ -51,7 +51,7 @@ const projectsData = [
   {
     title: 'AI-Generated Image Detector',
     image: 'AI-Generated Image Detector.png',
-    description: 'Designed and trained a model to classify AI-generated vs.real images using a dataset of 50K+ samples from StableDiffusion, MidJourney, and ImageNet.',
+    description: 'Designed and trained a model to classify AI-generated vs. real images using a dataset of 50K+ samples from Stable Diffusion, MidJourney, and ImageNet.',
     link: 'https://github.com/S1u2m3e4e5t6/AI-Generated-Image-Detector'
   }
 ];
